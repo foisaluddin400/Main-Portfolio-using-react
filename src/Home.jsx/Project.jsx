@@ -24,7 +24,7 @@ const Project = () => {
             </div>
           </figure>
           <div className="p-3">
-            <h2 className="card-title">Shoes!</h2>
+            <h2 className="card-title">Shs!</h2>
           </div>
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 ">
             <p className="text-2xl pt-2 pl-2 mr-11 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaCode /></p>
@@ -44,7 +44,7 @@ const Project = () => {
             </div>
           </figure>
           <div className="p-3">
-            <h2 className="card-title">Shoes!</h2>
+            <h2 className="card-title">Shs!</h2>
           </div>
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
           <p className="text-2xl pt-2 pl-2 mr-11 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaCode /></p>
@@ -64,7 +64,7 @@ const Project = () => {
             </div>
           </figure>
           <div className="p-3">
-            <h2 className="card-title">Shoes!</h2>
+            <h2 className="card-title">Ss!</h2>
           </div>
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
           <p className="text-2xl pt-2 pl-2 mr-11 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaCode /></p>
@@ -84,7 +84,7 @@ const Project = () => {
             </div>
           </figure>
           <div className="p-3">
-            <h2 className="card-title">Shoes!</h2>
+            <h2 className="card-title">S!</h2>
           </div>
           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
           <p className="text-2xl pt-2 pl-2 mr-11 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaCode /></p>

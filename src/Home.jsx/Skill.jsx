@@ -2,7 +2,7 @@ import css from '../assets/css-3.png'
 import html from '../assets/html-5.png'
 import js from '../assets/js.png'
 import git from '../assets/github.png'
-import react from '../assets/react1.webp'
+// import react from '../assets/react1.webp'
 import next from '../assets/next.png'
 import node from '../assets/node.png'
 import mongo from '../assets/mongo.png'
@@ -10,6 +10,7 @@ import fire from '../assets/firebase.png'
 import express from '../assets/express.png'
 import tail from '../assets/tail.png'
 import figma from '../assets/figma.png'
+
 const SkillProgress = ({ skillName, percentage, logo }) => {
   return (
     <div className="flex items-center mb-4">
@@ -36,7 +37,7 @@ const Skill = () => {
     { name: 'CSS', percentage: 80, logo: css },
     { name: 'Tailwind', percentage: 80, logo: tail },
     { name: 'Javascript', percentage: 70, logo: js },
-    { name: 'React Js', percentage: 65, logo: react },
+    // { name: 'React Js', percentage: 65, logo: react },
     { name: 'Next Js', percentage: 40, logo: next },
     { name: 'Mongo DB', percentage: 50, logo: mongo },
     { name: 'Express Js', percentage: 60, logo: express},

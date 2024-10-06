@@ -1,9 +1,43 @@
-import { FaEye } from "react-icons/fa";
-import { FaCode } from "react-icons/fa";
+import React, { useEffect, useRef } from 'react';
+import { FaEye, FaCode } from "react-icons/fa";
+import Shoping from "../assets/shoping.png";
+import bistro from "../assets/bistro.png";
+import searching from "../assets/searcing.png";
+import ecommerce from "../assets/ecommerce.png";
+import oldecomerce from "../assets/old-ecomerce.png";
+import fahimbd from "../assets/bd-fahim.png";
+import calculator from "../assets/calculator.png";
+import light from "../assets/light.png";
+import { motion, useAnimation } from 'framer-motion';
 
 const Project = () => {
+  const controls = useAnimation();
+  const projectRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          controls.start({ opacity: 1, scale: 1 });
+        } else {
+          controls.start({ opacity: 0, scale: 0.8 });
+        }
+      });
+    });
+
+    if (projectRef.current) {
+      observer.observe(projectRef.current);
+    }
+
+    return () => {
+      if (projectRef.current) {
+        observer.unobserve(projectRef.current);
+      }
+    };
+  }, [controls]);
+
   return (
-    <div>
+    <div id="project" ref={projectRef}>
       <div className="text-center py-[50px]">
         <span className="font-bold text-3xl text-yellow-500">_</span>
         <h1 className="font-bold text-2xl">
@@ -11,86 +45,86 @@ const Project = () => {
         </h1>
         <p className="text-slate-400">Some basic information about myself</p>
       </div>
-      <div className="grid md:grid-cols-4 mx-11">
-        {/* Card 1 */}
-        <div className="relative shadow-2xl m-5 overflow-hidden">
-          <figure>
-            <div className="w-full md:h-[300px] h-[400px] overflow-hidden">
-              <img
-                className="border-[10px] border-[#34293a] rounded-md"
-                src="https://i.ibb.co.com/pxWP1zm/screencapture-file-G-e-commarce-website-2-index-html-2024-01-11-12-54-18.png"
-                alt="Shoes"
-              />
+      <div className="grid md:grid-cols-4 ">
+        {[ // Create an array of projects to map through
+          {
+            image: Shoping,
+            title: "Shopping Website",
+            codeLink: "https://github.com/foisaluddin400/e-commerse-website-react",
+            liveLink: "https://e-commerse-website-react.vercel.app/"
+          },
+          {
+            image: bistro,
+            title: "FoodShop Website",
+            codeLink: "https://github.com/foisaluddin400/Front-end-bistro",
+            liveLink: "https://bistro-final-website.web.app/"
+          },
+          {
+            image: searching,
+            title: "E-Commerce Website",
+            codeLink: "https://github.com/foisaluddin400/Searcing-product-next-js",
+            liveLink: "https://searcing-product-next-js.vercel.app/Search"
+          },
+          {
+            image: ecommerce,
+            title: "Shs!",
+            codeLink: "https://github.com/foisaluddin400/ecommarcce-website",
+            liveLink: "https://ecommarcce-website.vercel.app/"
+          },
+          {
+            image: oldecomerce,
+            title: "Fast Food Project",
+            codeLink: "https://github.com/foisaluddin400/responsive-food",
+            liveLink: "https://responsive-food.vercel.app/"
+          },
+          {
+            image: fahimbd,
+            title: "Personal Website",
+            codeLink: "https://github.com/foisaluddin400/fahim-bd",
+            liveLink: "https://fahim-bd.vercel.app/"
+          },
+          {
+            image: calculator,
+            title: "Calculator",
+            codeLink: "https://github.com/foisaluddin400/calculator",
+            liveLink: "https://foisaluddin400.github.io/calculator/"
+          },
+          {
+            image: light,
+            title: "Light & Dark Mode",
+            codeLink: "https://github.com/foisaluddin400/dark-light-mode",
+            liveLink: "https://dark-light-mode.vercel.app/"
+          },
+        ].map((project, index) => (
+          <motion.div 
+            key={index}
+            className="relative shadow-2xl m-5 overflow-hidden"
+            initial={{ opacity: 0, scale: 0.8 }} 
+            animate={controls}
+            transition={{ duration: 0.5 }}
+          >
+            <figure>
+              <div className="w-full md:h-[300px] h-[400px] overflow-hidden">
+                <img
+                  className="border-[10px] border-[#201924] rounded-md"
+                  src={project.image}
+                  alt={project.title}
+                />
+              </div>
+            </figure>
+            <div className="">
+              <h2 className="card-title p-3 bg-[#201924] text-[17px] rounded-b-md">{project.title}</h2>
             </div>
-          </figure>
-          <div className="p-3">
-            <h2 className="card-title">Shs!</h2>
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 ">
-            <p className="text-2xl pt-2 pl-2 mr-11 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaCode /></p>
-            <p className="text-2xl pt-2 pl-2 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaEye /></p>
-          </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="relative shadow-xl m-5 overflow-hidden">
-          <figure>
-            <div className="w-full md:h-[300px] h-[400px] overflow-hidden">
-              <img
-                className="border-[10px] border-[#34293a] rounded-md"
-                src="https://i.ibb.co.com/pxWP1zm/screencapture-file-G-e-commarce-website-2-index-html-2024-01-11-12-54-18.png"
-                alt="Shoes"
-              />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 ">
+              <p className="text-2xl pt-2 pl-2 mr-11 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full">
+                <a href={project.codeLink}><FaCode /></a>
+              </p>
+              <p className="text-2xl pt-2 pl-2 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full">
+                <a href={project.liveLink}><FaEye /></a>
+              </p>
             </div>
-          </figure>
-          <div className="p-3">
-            <h2 className="card-title">Shs!</h2>
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
-          <p className="text-2xl pt-2 pl-2 mr-11 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaCode /></p>
-          <p className="text-2xl pt-2 pl-2 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaEye /></p>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className="relative shadow-xl m-5 overflow-hidden">
-          <figure>
-            <div className="w-full md:h-[300px] h-[400px] overflow-hidden">
-              <img
-                className="border-[10px] border-[#34293a] rounded-md"
-                src="https://i.ibb.co.com/pxWP1zm/screencapture-file-G-e-commarce-website-2-index-html-2024-01-11-12-54-18.png"
-                alt="Shoes"
-              />
-            </div>
-          </figure>
-          <div className="p-3">
-            <h2 className="card-title">Ss!</h2>
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
-          <p className="text-2xl pt-2 pl-2 mr-11 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaCode /></p>
-          <p className="text-2xl pt-2 pl-2 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaEye /></p>
-          </div>
-        </div>
-
-        {/* Card 4 */}
-        <div className="relative shadow-xl m-5 overflow-hidden">
-          <figure>
-            <div className="w-full md:h-[300px] h-[400px] overflow-hidden">
-              <a href="https://i.ibb.co.com/nzMLpWg/screencapture-localhost-5175-2024-10-05-22-04-19.png"><img
-                className="border-[10px] border-[#34293a] rounded-md"
-                src="https://i.ibb.co.com/pxWP1zm/screencapture-file-G-e-commarce-website-2-index-html-2024-01-11-12-54-18.png"
-                alt="Shoes"
-              /></a>
-            </div>
-          </figure>
-          <div className="p-3">
-            <h2 className="card-title">S!</h2>
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75 text-white opacity-0 hover:opacity-100 transition-opacity duration-300">
-          <p className="text-2xl pt-2 pl-2 mr-11 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaCode /></p>
-          <p className="text-2xl pt-2 pl-2 cursor-pointer bg-orange-600 w-[40px] h-[40px] rounded-full"><FaEye /></p>
-          </div>
-        </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

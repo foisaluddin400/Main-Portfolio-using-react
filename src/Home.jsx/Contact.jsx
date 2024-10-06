@@ -1,9 +1,74 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 const Contact = () => {
     const controls = useAnimation();
     const contactRef = useRef(null);
+
+
+
+
+
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+      });
+      const [error, setError] = useState("");
+    
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError(""); // Reset error before submitting
+    
+        // Client-side email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+          setError("Invalid email address."); // Set error message for invalid email
+          return;
+        }
+    
+        try {
+          const response = await fetch("https://my-portfolio-contactform-server.vercel.app/contact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+    
+          const data = await response.json();
+    
+          if (!data.success) {
+            setError(data.error); // Set error message from the server
+          } else {
+            // Handle success case (e.g., show a success message or reset form)
+            alert("Message sent successfully!");
+            setFormData({
+              name: "",
+              email: "",
+              message: "",
+            });
+          }
+        } catch (err) {
+          setError("An unexpected error occurred.");
+          console.error("Error:", err);
+        }
+      };
+
+
+
+
+
+
+
+
+
+
+
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -50,37 +115,39 @@ const Contact = () => {
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, commodi quidem! Veritatis delectus a et.
                         </p>
                     </div>
-                    <form className="w-full">
+                    <form onSubmit={handleSubmit} className="w-full">
                         <div className="md:grid gap-5 md:grid-cols-2 mb-6">
                             <input
+                            value={formData.name}
+                            onChange={handleChange}
                                 type="text"
                                 placeholder="Your Your Name"
+                                name="name"
                                 className="w-full p-4 bg-[#302738] text-gray-300 rounded-lg border-b border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
                             />
                             <input
-                                type="text"
+                            value={formData.email}
+                            onChange={handleChange}
+                                type="email"
+                                name="email"
                                 placeholder="Your Email"
                                 className="w-full p-4 bg-[#302738] text-gray-300 rounded-lg border-b border-orange-500 focus:outline-none focus:ring-2 md:my-0 my-3 focus:ring-orange-500"
                             />
                             <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
                                 placeholder="Send Your Message"
                                 className="w-full p-4 bg-[#302738] text-gray-300 rounded-lg border-b border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 col-span-2"
                                 rows="4"
                             ></textarea>
                         </div>
                         <div className="flex justify-start space-x-4">
-                            <button
-                                type="submit"
-                                className="px-6 py-2 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                            >
-                                SEND
-                            </button>
-                            <button
-                                type="reset"
-                                className="px-6 py-2 bg-[#302738] text-white font-bold rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500"
-                            >
-                                RESET
-                            </button>
+                        <div className="flex justify-center mt-8">
+            <button type="submit" className="bg-orange-700 text-white btn">Send a message</button>
+            {error && <p style={{ color: "red" }}>{error}</p>} {/* Display error message */}
+          </div>
+                            
                         </div>
                     </form>
                 </div>

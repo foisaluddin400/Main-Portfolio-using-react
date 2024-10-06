@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Complit = () => {
     const [projectCount, setProjectCount] = useState(0);
@@ -26,24 +27,48 @@ const Complit = () => {
     }, []);
 
     return (
-        <div>
-            <div className="md:flex md:justify-around items-center bg-[#1c1528] text-white py-8 mt-6">
-                <div className="text-center">
-                    <div className="text-4xl font-bold">{projectCount}</div>
-                    <div className="text-xl mt-2">Project Completed</div>
-                </div>
-                <div className="md:border-l border-dotted border-gray-600 h-24 mx-4"></div>
-                <div className="text-center">
-                    <div className="text-4xl font-bold">{clientCount}</div>
-                    <div className="text-xl mt-2">Satisfied Clients</div>
-                </div>
-                <div className="md:border-l border-dotted border-gray-600 h-24 mx-4"></div>
-                <div className="text-center">
-                    <div className="text-4xl font-bold">{feedbackCount}%</div>
-                    <div className="text-xl mt-2">Positive Feedback</div>
-                </div>
+        <motion.div
+            className="md:flex md:justify-around items-center bg-[#1c1528] text-white py-8 mt-6"
+            initial={{ opacity: 0, scale: 0.5 }} // Start smaller and transparent
+            animate={{ opacity: 1, scale: 1 }} // Scale to normal and fully visible
+            transition={{ duration: 0.5 }} // Animation duration
+        >
+            <div className="text-center">
+                <motion.div 
+                    className="text-4xl font-bold" 
+                    initial={{ scale: 0 }} 
+                    animate={{ scale: 1 }} 
+                    transition={{ duration: 0.5 }} // Adjust duration as needed
+                >
+                    {projectCount}
+                </motion.div>
+                <div className="text-xl mt-2">Project Completed</div>
             </div>
-        </div>
+            <div className="md:border-l border-dotted border-gray-600 h-24 mx-4"></div>
+            <div className="text-center">
+                <motion.div 
+                    className="text-4xl font-bold" 
+                    initial={{ scale: 0 }} 
+                    animate={{ scale: 1 }} 
+                    transition={{ duration: 0.5 }} // Adjust duration as needed
+                >
+                    {clientCount}
+                </motion.div>
+                <div className="text-xl mt-2">Satisfied Clients</div>
+            </div>
+            <div className="md:border-l border-dotted border-gray-600 h-24 mx-4"></div>
+            <div className="text-center">
+                <motion.div 
+                    className="text-4xl font-bold" 
+                    initial={{ scale: 0 }} 
+                    animate={{ scale: 1 }} 
+                    transition={{ duration: 0.5 }} // Adjust duration as needed
+                >
+                    {feedbackCount}%
+                </motion.div>
+                <div className="text-xl mt-2">Positive Feedback</div>
+            </div>
+        </motion.div>
     );
 };
 

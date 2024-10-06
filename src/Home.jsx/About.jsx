@@ -8,6 +8,7 @@ const About = () => {
   useEffect(() => {
     controls.start({
       scale: [0.8, 1], // Start slightly smaller and grow to full size
+      opacity: [0, 1], // Start transparent and fade in
       transition: { duration: 0.5, ease: "easeOut" }
     }); 
   }, [controls]);

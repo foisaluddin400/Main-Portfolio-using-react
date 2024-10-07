@@ -36,7 +36,8 @@ const MainHero = () => {
 
   return (
     <div id="home">
-      <div className="hero md:h-[60vh]">
+    
+      <div className="hero md:h-[75vh]">
         <div className="hero-content grid md:grid-cols-2">
           <div className="text-center lg:text-left">
             <h1 className="text-xl font-bold">
@@ -44,7 +45,7 @@ const MainHero = () => {
                 HI, <span className="text-orange-500 text-2xl animate-grow-shrink">I am Momtaj</span>
               </h1>
             </h1>
-            <h1 className="text-4xl font-bold">
+            <h1 className="md:text-4xl text-2xl font-bold">
               <span className="animate-grow-shrink">{text}</span>
             </h1>
             <p className="py-3">
@@ -57,11 +58,17 @@ const MainHero = () => {
           <div className="flex justify-center">
             <motion.div 
               className="max-w-sm shrink-0" 
-              initial={{ scale: 0 }} // Start with scale 0
-              animate={{ scale: 1 }} // Animate to scale 1
-              transition={{ duration: 0.5 }} // Duration of animation
+              animate={{ scale: [1, 1.1, 1] }} // Scale animation
+              transition={{
+                duration: 2, // Duration of each cycle
+                ease: "easeInOut",
+                repeat: Infinity, // Repeat infinitely
+                repeatType: "loop" // Loop through the animation
+              }}
             >
-              <img className="w-[80]" src={pic} alt="About Me" />
+              <div className="flex justify-center mt-10 md:mt-0">
+              <img className="md:w-[90%] w-[70%] " src={pic} alt="About Me" />
+              </div>
             </motion.div>
           </div>
         </div>

@@ -22,7 +22,7 @@ const About = () => {
           animate={{ scale: 1 }} 
           transition={{ duration: 0.5 }}
         >
-          <motion.div className="m-[100px] animate-rotate">
+          <motion.div className="md:m-[100px] m-[30px] mt-11 animate-rotate">
             <img className="w-full" src={about} alt="About Me" />
           </motion.div>
         </motion.div>
@@ -32,7 +32,7 @@ const About = () => {
           animate={{ scale: 1 }} 
           transition={{ duration: 0.5 }}
         >
-          <div className="m-11">
+          <div className="md:m-11 m-6 mb-11">
             <h1 className="text-4xl font-bold">About Me</h1>
             <p className="py-3">
               My name is Momtaj Uddin, and I'm a MERN stack developer from Bangladesh. 

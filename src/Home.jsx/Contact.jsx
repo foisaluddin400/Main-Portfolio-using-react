@@ -95,7 +95,7 @@ const Contact = () => {
         </h1>
         <p className="text-slate-400">Some basic information about myself</p>
       </div>
-      <div className="bg-[#1c1528] text-white flex flex-col items-center justify-center p-8">
+      <div className="bg-[#1c1528] rounded-md text-white flex flex-col items-center justify-center p-8">
         <div className="w-full mx-auto">
           <div className="text-left mb-8">
             <h2 className="text-5xl font-bold text-white">

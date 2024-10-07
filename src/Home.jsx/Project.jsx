@@ -67,7 +67,7 @@ const Project = () => {
           },
           {
             image: ecommerce,
-            title: "Shs!",
+            title: "Ecommerce Website",
             codeLink: "https://github.com/foisaluddin400/ecommarcce-website",
             liveLink: "https://ecommarcce-website.vercel.app/"
           },
@@ -75,25 +75,25 @@ const Project = () => {
             image: oldecomerce,
             title: "Fast Food Project",
             codeLink: "https://github.com/foisaluddin400/responsive-food",
-            liveLink: "https://responsive-food.vercel.app/"
+            liveLink: "https://responsive-food-khaki.vercel.app/"
           },
           {
             image: fahimbd,
             title: "Personal Website",
-            codeLink: "https://github.com/foisaluddin400/fahim-bd",
-            liveLink: "https://fahim-bd.vercel.app/"
+            codeLink: "https://github.com/foisaluddin400/resturent-bdcalling-react",
+            liveLink: "https://resturent-bdcalling-react.vercel.app/"
           },
           {
             image: calculator,
             title: "Calculator",
-            codeLink: "https://github.com/foisaluddin400/calculator",
-            liveLink: "https://foisaluddin400.github.io/calculator/"
+            codeLink: "https://github.com/foisaluddin400/calculator-project-java",
+            liveLink: "https://calculator-project-java.vercel.app/"
           },
           {
             image: light,
             title: "Light & Dark Mode",
-            codeLink: "https://github.com/foisaluddin400/dark-light-mode",
-            liveLink: "https://dark-light-mode.vercel.app/"
+            codeLink: "https://github.com/foisaluddin400/light-on-off",
+            liveLink: "https://light-on-off-xi.vercel.app/"
           },
         ].map((project, index) => (
           <motion.div 

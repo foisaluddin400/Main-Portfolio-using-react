@@ -28,7 +28,7 @@ const Complit = () => {
 
     return (
         <motion.div
-            className="md:flex md:justify-around items-center bg-[#1c1528] text-white py-8 mt-6"
+            className="md:flex md:justify-around items-center bg-[#1c1528] rounded-md z-30 text-white py-8 mt-6"
             initial={{ opacity: 0, scale: 0.5 }} // Start smaller and transparent
             animate={{ opacity: 1, scale: 1 }} // Scale to normal and fully visible
             transition={{ duration: 0.5 }} // Animation duration

@@ -15,7 +15,7 @@ const Footer = () => {
             <a href="https://www.facebook.com/rh.foisal">
               <img className="md:w-[45px] w-[30px]" src={facebook} alt="facebook" />
             </a>
-            <a href="https://mail.google.com/mail/u/0/#inbox">
+            <a href="mailto:foisalrk2@gmail.com?subject=Subject%20Here&body=Body%20Text%20Here">
               <img className="md:w-[45px] w-[30px]" src={gmail} alt="gmail" />
             </a>
             <a href="https://www.instagram.com/rkfoisal330/profilecard/?igsh=ejZvOTg0cWV4dmFj">

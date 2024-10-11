@@ -68,7 +68,7 @@ const Project = () => {
           },
           {
             image: searching,
-            title: "E-Commerce Website",
+            title: "Search Item",
             codeLink: "https://github.com/foisaluddin400/Searcing-product-next-js",
             liveLink: "https://searcing-product-next-js.vercel.app/Search"
           },

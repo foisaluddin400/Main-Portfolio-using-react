@@ -73,24 +73,6 @@ const Project = () => {
             liveLink: "https://searcing-product-next-js.vercel.app/Search"
           },
           {
-            image: ecommerce,
-            title: "Ecommerce Website",
-            codeLink: "https://github.com/foisaluddin400/ecommarcce-website",
-            liveLink: "https://ecommarcce-website.vercel.app/"
-          },
-          {
-            image: oldecomerce,
-            title: "Fast Food Project",
-            codeLink: "https://github.com/foisaluddin400/responsive-food",
-            liveLink: "https://responsive-food-khaki.vercel.app/"
-          },
-          {
-            image: fahimbd,
-            title: "Personal Website",
-            codeLink: "https://github.com/foisaluddin400/resturent-bdcalling-react",
-            liveLink: "https://resturent-bdcalling-react.vercel.app/"
-          },
-          {
             image: calculator,
             title: "Calculator",
             codeLink: "https://github.com/foisaluddin400/calculator-project-java",

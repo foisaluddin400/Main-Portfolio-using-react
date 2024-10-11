@@ -6,8 +6,7 @@ import './index.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className='max-w-screen-xl mx-auto '>
-    <App />
-      </div>
-    
+      <App />
+    </div>
   </StrictMode>,
 )

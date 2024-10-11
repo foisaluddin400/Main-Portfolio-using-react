@@ -8,6 +8,7 @@ import oldecomerce from "../assets/old-ecomerce.png";
 import fahimbd from "../assets/bd-fahim.png";
 import calculator from "../assets/calculator.png";
 import light from "../assets/light.png";
+import furniture from "../assets/furniture.png";
 import { motion, useAnimation } from 'framer-motion';
 
 const Project = () => {
@@ -58,6 +59,12 @@ const Project = () => {
             title: "FoodShop Website",
             codeLink: "https://github.com/foisaluddin400/Front-end-bistro",
             liveLink: "https://bistro-final-website.web.app/"
+          },
+          {
+            image: furniture,
+            title: "Furniture Website",
+            codeLink: "https://github.com/foisaluddin400/furniture-client-side",
+            liveLink: "https://backhand-login.web.app/"
           },
           {
             image: searching,

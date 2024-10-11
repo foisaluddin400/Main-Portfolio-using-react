@@ -64,8 +64,13 @@
 
 
 
-
-
+.resume{
+  transition: 0.3s;
+}
+.resume:hover{
+background: black;
+border: 1px solid orangered;
+}
 
 
 

@@ -128,7 +128,7 @@ const Skill = () => {
         <div className="text-center py-[50px]">
           <span className="font-bold text-3xl text-yellow-500 ">_</span>
           <h1 className="font-bold text-2xl">My <span className="text-orange-600">Skill</span></h1>
-          <p className="text-slate-400">Some basic information about myself</p>
+          
         </div>
         <div className="bg-[#1c1528] rounded-md text-white p-8">
           <h3 className="text-xl mb-4">Programming Skills</h3>

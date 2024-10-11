@@ -44,7 +44,7 @@ const Project = () => {
         <h1 className="font-bold text-2xl">
           My <span className="text-orange-600">Project</span>
         </h1>
-        <p className="text-slate-400">Some basic information about myself</p>
+      
       </div>
       <div className="grid md:grid-cols-4 ">
         {[ // Create an array of projects to map through

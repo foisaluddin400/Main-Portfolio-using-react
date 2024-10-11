@@ -93,7 +93,7 @@ const Contact = () => {
         <h1 className="font-bold text-2xl">
           My <span className="text-orange-600">Contact</span>
         </h1>
-        <p className="text-slate-400">Some basic information about myself</p>
+        
       </div>
       <div className="bg-[#1c1528] rounded-md text-white flex flex-col items-center justify-center p-8">
         <div className="w-full mx-auto">
@@ -101,10 +101,7 @@ const Contact = () => {
             <h2 className="text-5xl font-bold text-white">
               Contact <span className="text-orange-500">Us</span>
             </h2>
-            <p className="text-lg text-gray-300 mt-2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni,
-              commodi quidem! Veritatis delectus a et.
-            </p>
+           
           </div>
           <form onSubmit={handleSubmit} className="w-full">
             <div className="md:grid gap-5 md:grid-cols-2 mb-6">
@@ -135,7 +132,7 @@ const Contact = () => {
             </div>
             <div className="flex justify-start space-x-4">
               <div className="flex justify-center mt-8">
-                <button type="submit" className="bg-orange-700 text-white btn">
+                <button type="submit" className="bg-orange-700 text-white btn resume">
                   Send a message
                 </button>
                 {error && <p style={{ color: "red" }}>{error}</p>}{" "}

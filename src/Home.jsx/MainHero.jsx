@@ -53,7 +53,7 @@ const MainHero = () => {
                 I'm a passionate web developer focused on creating amazing digital experiences.
               </h1>
             </p>
-            <button className="bg-orange-600 py-2 px-4 rounded">Resume</button>
+            <a href="https://drive.google.com/file/d/1_SjHrpksI4XzyUUZHwYf4zDAYzRmHu9_/view?usp=sharing"><button className="bg-orange-600 py-2 px-4 rounded resume ">Resume</button></a>
           </div>
           <div className="flex justify-center">
             <motion.div 

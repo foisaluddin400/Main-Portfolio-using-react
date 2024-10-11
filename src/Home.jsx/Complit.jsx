@@ -8,11 +8,11 @@ const Complit = () => {
 
     useEffect(() => {
         const projectInterval = setInterval(() => {
-            setProjectCount((prev) => (prev < 20 ? prev + 1 : prev));
+            setProjectCount((prev) => (prev < 14 ? prev + 1 : prev));
         }, 100); // Increment every 100 milliseconds
 
         const clientInterval = setInterval(() => {
-            setClientCount((prev) => (prev < 2 ? prev + 1 : prev));
+            setClientCount((prev) => (prev < 5 ? prev + 1 : prev));
         }, 500); // Increment every 500 milliseconds
 
         const feedbackInterval = setInterval(() => {

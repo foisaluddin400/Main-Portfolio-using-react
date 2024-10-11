@@ -45,7 +45,7 @@ const MainHero = () => {
                 HI, <span className="text-orange-500 text-2xl animate-grow-shrink">I am Momtaj</span>
               </h1>
             </h1>
-            <h1 className="md:text-4xl text-2xl font-bold">
+            <h1 className="md:text-4xl text-2xl font-bold md:h-[80px] h-[68px]">
               <span className="animate-grow-shrink">{text}</span>
             </h1>
             <p className="py-3">

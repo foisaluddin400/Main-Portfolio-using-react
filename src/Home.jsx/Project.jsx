@@ -55,6 +55,12 @@ const Project = () => {
             liveLink: "https://e-commerse-website-react.vercel.app/"
           },
           {
+            image: searching,
+            title: "Search Item",
+            codeLink: "https://github.com/foisaluddin400/Searcing-product-next-js",
+            liveLink: "https://searcing-product-next-js.vercel.app/Search"
+          },
+          {
             image: bistro,
             title: "FoodShop Website",
             codeLink: "https://github.com/foisaluddin400/Front-end-bistro",
@@ -66,12 +72,7 @@ const Project = () => {
             codeLink: "https://github.com/foisaluddin400/furniture-client-side",
             liveLink: "https://backhand-login.web.app/"
           },
-          {
-            image: searching,
-            title: "Search Item",
-            codeLink: "https://github.com/foisaluddin400/Searcing-product-next-js",
-            liveLink: "https://searcing-product-next-js.vercel.app/Search"
-          },
+          
           {
             image: calculator,
             title: "Calculator",

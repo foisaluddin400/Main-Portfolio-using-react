@@ -49,10 +49,10 @@ const Project = () => {
       <div className="grid md:grid-cols-4 ">
         {[ // Create an array of projects to map through
           {
-            image: Shoping,
-            title: "Shopping Website",
-            codeLink: "https://github.com/foisaluddin400/e-commerse-website-react",
-            liveLink: "https://e-commerse-website-react.vercel.app/"
+            image: furniture,
+            title: "Furniture Website",
+            codeLink: "https://github.com/foisaluddin400/furniture-client-side",
+            liveLink: "https://backhand-login.web.app/"
           },
           {
             image: searching,
@@ -67,12 +67,11 @@ const Project = () => {
             liveLink: "https://bistro-final-website.web.app/"
           },
           {
-            image: furniture,
-            title: "Furniture Website",
-            codeLink: "https://github.com/foisaluddin400/furniture-client-side",
-            liveLink: "https://backhand-login.web.app/"
+            image: Shoping,
+            title: "Shopping Website",
+            codeLink: "https://github.com/foisaluddin400/e-commerse-website-react",
+            liveLink: "https://e-commerse-website-react.vercel.app/"
           },
-          
           {
             image: calculator,
             title: "Calculator",

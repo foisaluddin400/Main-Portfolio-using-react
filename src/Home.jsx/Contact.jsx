@@ -109,7 +109,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 type="text"
-                placeholder="Your Your Name"
+                placeholder="Your Name"
                 name="name"
                 className="w-full p-4 bg-[#302738] text-gray-300 rounded-lg border-b border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
@@ -125,7 +125,7 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Send Your Message"
+                placeholder="Your Message"
                 className="w-full p-4 bg-[#302738] text-gray-300 rounded-lg border-b border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 col-span-2"
                 rows="4"
               ></textarea>

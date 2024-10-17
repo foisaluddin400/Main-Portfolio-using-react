@@ -44,6 +44,7 @@ const About = () => {
               through intuitive interfaces, focusing on usability and satisfaction.
             </p>
           </div>
+          
         </motion.div>
       </div>
     </motion.div>

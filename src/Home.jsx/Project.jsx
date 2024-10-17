@@ -3,9 +3,7 @@ import { FaEye, FaCode } from "react-icons/fa";
 import Shoping from "../assets/shoping.png";
 import bistro from "../assets/bistro.png";
 import searching from "../assets/searcing.png";
-import ecommerce from "../assets/ecommerce.png";
-import oldecomerce from "../assets/old-ecomerce.png";
-import fahimbd from "../assets/bd-fahim.png";
+import team from "../assets/team.png"
 import calculator from "../assets/calculator.png";
 import light from "../assets/light.png";
 import furniture from "../assets/furniture.png";
@@ -48,6 +46,12 @@ const Project = () => {
       </div>
       <div className="grid md:grid-cols-4 ">
         {[ // Create an array of projects to map through
+          {
+            image: team,
+            title: "NovaRide (Team Project)",
+            codeLink: "https://github.com/foisaluddin400/car-website-team",
+            liveLink: "https://car-website-team-kkv7.vercel.app/"
+          },
           {
             image: furniture,
             title: "Furniture Website",

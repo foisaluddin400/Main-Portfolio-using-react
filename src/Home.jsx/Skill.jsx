@@ -7,11 +7,12 @@ import git from '../assets/github.png';
 import react from '../assets/react2.png';
 import next from '../assets/next.png';
 import node from '../assets/node.png';
-import mongo from '../assets/mongo.png';
+
 import fire from '../assets/firebase.png';
 import express from '../assets/express.png';
 import tail from '../assets/tail.png';
 import figma from '../assets/figma.png';
+import mongoose from '../assets/mongoose.png'
 
 const SkillProgress = ({ skillName, percentage, logo }) => {
   return (
@@ -37,18 +38,18 @@ const SkillProgress = ({ skillName, percentage, logo }) => {
 
 const Skill = () => {
   const programmingSkills = [
-    { name: 'HTML', percentage: 85, logo: html },
-    { name: 'CSS', percentage: 80, logo: css },
-    { name: 'Tailwind', percentage: 80, logo: tail },
-    { name: 'Javascript', percentage: 70, logo: js },
-    { name: 'React Js', percentage: 65, logo: react },
-    { name: 'Next Js', percentage: 40, logo: next },
-    { name: 'Mongo DB', percentage: 50, logo: mongo },
-    { name: 'Express Js', percentage: 60, logo: express },
-    { name: 'Node Js', percentage: 45, logo: node },
+    { name: 'HTML', percentage: 95, logo: html },
+    { name: 'CSS', percentage: 90, logo: css },
+    { name: 'Tailwind', percentage: 85, logo: tail },
+    { name: 'Javascript', percentage: 85, logo: js },
+    { name: 'React Js', percentage: 85, logo: react },
+    { name: 'Next Js', percentage: 65, logo: next },
+    { name: 'Mongoose', percentage: 70, logo: mongoose },
+    { name: 'Express Js', percentage: 75, logo: express },
+    { name: 'Node Js', percentage: 65, logo: node },
     { name: 'Firebase', percentage: 75, logo: fire },
     { name: 'Github', percentage: 70, logo: git },
-    { name: 'Figma', percentage: 80, logo: figma },
+    { name: 'Figma', percentage: 90, logo: figma },
   ];
 
   const personalSkills = [

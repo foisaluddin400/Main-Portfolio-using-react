@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
-
+import logo from '../assets/logo.png'
 const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false); // State to track scroll position
 
@@ -34,48 +34,48 @@ const Hero = () => {
         }`}
       >
         <div className="navbar-start">
-          <a className="btn btn-ghost text-xl">FOISAL</a>
+          <a className="text-[12px] ml-4 lg:m-0" href="#"><img className="w-[40px]" src={logo} alt="" />FOISAL</a>
         </div>
         <div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
-              <li>
+              <li className="hover:bg-orange-700">
                 <a href="#home">HOME</a>
               </li>
-              <li>
+              <li className="hover:bg-orange-700">
                 <a href="#about">ABOUT</a>
               </li>
-              <li>
-                <a href="#skill">Skill</a>
+              <li className="hover:bg-orange-700">
+                <a href="#skill">SKILL</a>
               </li>
-              <li>
-                <a href="#project">Project</a>
+              <li className="hover:bg-orange-700">
+                <a href="#project">PROJECT</a>
               </li>
-              <li>
-                <a href="#contact">Contact</a>
+              <li className="hover:bg-orange-700">
+                <a href="#contact">CONTACT</a>
               </li>
             </ul>
           </div>
           <div className="block lg:hidden">
             <details className="dropdown">
-              <summary className="btn m-1 bg-[#ffffff00] border-none text-white">
+              <summary className="btn hover:bg-[#00000000]  bg-[#ffffff00] border-none text-white">
                 <HiOutlineBars3BottomRight className="text-white text-4xl" />
               </summary>
-              <ul className="menu dropdown-content bg-[#0e083c] rounded-sm z-[1] right-0 w-52 p-2 shadow">
-                <li>
+              <ul className="menu dropdown-content bg-[#110041] rounded-sm z-[1] right-0 w-52 p-2 shadow">
+                <li className="hover:bg-orange-700">
                   <a href="#home">HOME</a>
                 </li>
-                <li>
+                <li className="hover:bg-orange-700">
                   <a href="#about">ABOUT</a>
                 </li>
-                <li>
-                  <a href="#skill">Skill</a>
+                <li className="hover:bg-orange-700">
+                  <a href="#skill">SKILL</a>
                 </li>
-                <li>
-                  <a href="#project">Project</a>
+                <li className="hover:bg-orange-700">
+                  <a href="#project">PROJECTS</a>
                 </li>
-                <li>
-                  <a href="#contact">Contact</a>
+                <li className="hover:bg-orange-700">
+                  <a href="#contact">CONTACT</a>
                 </li>
               </ul>
             </details>

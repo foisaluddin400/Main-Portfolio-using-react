@@ -39,7 +39,7 @@ const MainHero = () => {
     
       <div className="hero md:h-[75vh]">
         <div className="hero-content grid md:grid-cols-2">
-          <div className="text-center lg:text-left">
+          <div className="text-center mt-11 lg:mt-0 lg:text-left">
             <h1 className="text-xl font-bold">
               <h1 className="pb-2">
                 HI, <span className="text-orange-500 text-2xl animate-grow-shrink">I am Momtaj</span>

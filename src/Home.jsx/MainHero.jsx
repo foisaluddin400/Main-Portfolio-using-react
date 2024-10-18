@@ -55,21 +55,12 @@ const MainHero = () => {
             </p>
             <a href="https://drive.google.com/file/d/1_SjHrpksI4XzyUUZHwYf4zDAYzRmHu9_/view?usp=sharing"><button className="bg-orange-600 py-2 px-4 rounded resume ">Resume</button></a>
           </div>
-          <div className="flex justify-center">
-            <motion.div 
-              className="max-w-sm shrink-0" 
-              animate={{ scale: [1, 1.1, 1] }} // Scale animation
-              transition={{
-                duration: 2, // Duration of each cycle
-                ease: "easeInOut",
-                repeat: Infinity, // Repeat infinitely
-                repeatType: "loop" // Loop through the animation
-              }}
-            >
+          <div className="md:flex justify-center">
+            
               <div className="flex justify-center mt-10 md:mt-0">
               <img className="md:w-[90%] w-[70%] " src={pic} alt="About Me" />
               </div>
-            </motion.div>
+            
           </div>
         </div>
       </div>

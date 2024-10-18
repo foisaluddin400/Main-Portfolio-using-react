@@ -26,7 +26,7 @@ const SkillProgress = ({ skillName, percentage, logo }) => {
               className="bg-orange-500 h-2 rounded-full"
               initial={{ width: 0 }} // Start with width 0
               animate={{ width: `${percentage}%` }} // Animate to the specified width
-              transition={{ duration: 0.5 }} // Animation duration
+              transition={{ duration: 0.1 }} // Animation duration
             />
           </div>
         </div>
@@ -52,14 +52,7 @@ const Skill = () => {
     { name: 'Figma', percentage: 90, logo: figma },
   ];
 
-  const personalSkills = [
-    { name: 'Creativity', percentage: 85 },
-    { name: 'Workability', percentage: 90 },
-    { name: 'Teamwork', percentage: 80 },
-    { name: 'Organizing', percentage: 75 },
-    { name: 'Concentration', percentage: 70 },
-    { name: 'Communication', percentage: 85 },
-  ];
+  
 
   // State for skill percentages
   const [visibleSkills, setVisibleSkills] = useState([]);
@@ -150,23 +143,8 @@ const Skill = () => {
               </motion.div>
             ))}
           </div>
-          <h3 className="text-xl mb-4">Personal Skills</h3>
-          <div className="flex flex-col sm:flex-row justify-between">
-            {personalSkills.map((skill) => (
-              <motion.div
-                key={skill.name}
-                className="flex flex-col items-center mb-4 sm:w-1/3"
-                initial={{ scale: 0 }} 
-                animate={{ scale: 1 }} 
-                transition={{ duration: 0.5 }} 
-              >
-                <div className="text-gray-300">{skill.name}</div>
-                <div className="bg-gray-600 h-20 w-20 rounded-full flex items-center justify-center">
-                  <span className="text-orange-500 text-2xl">{skill.percentage}%</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          
+          
         </div>
       </div>
     </motion.div>

@@ -4,11 +4,11 @@ import instragram from "../assets/insta.png";
 import watsapp from "../assets/watsapp.png";
 const Footer = () => {
   return (
-    <div className="mt-11 bg-zinc-950">
+    <div className="md:mt-11 px-3 bg-zinc-950">
       <div>
         <div className="grid grid-cols-2 py-6">
           <div className="md:pt-3 text-sm">
-          <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+          <p>Copyright © {new Date().getFullYear()} - All right reserved by Momtaj</p>
           </div>
           <div className="flex justify-end">
           <div className="flex gap-3">

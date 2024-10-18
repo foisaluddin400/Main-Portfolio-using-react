@@ -22,9 +22,9 @@ const About = () => {
           animate={{ scale: 1 }} 
           transition={{ duration: 0.5 }}
         >
-          <motion.div className=" animate-rotate">
+          <motion.div className=" ">
             <div className="md:m-[100px] m-[30px] mt-[80px]">
-            <img className="w-full" src={about} alt="About Me" />
+            <img className="md:w-full " src={about} alt="About Me" />
             </div>
           </motion.div>
         </motion.div>
